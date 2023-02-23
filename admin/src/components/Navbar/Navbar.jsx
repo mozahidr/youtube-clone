@@ -2,13 +2,14 @@ import React from 'react';
 import './Navbar.css';
 import { NotificationsNone, Language, Settings } from '@mui/icons-material';
 import avatar from '../../images/avatar.png';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
     <div className='navbar'>
         <div className='navbarWrapper'>
             <div className='navLeft'>
-                <span className='logo'>React Admin</span>
+                <Link to='/' className='link'><span className='logo'>React Admin</span></Link>
             </div>
             <div className='navRight'>
                 <div className='navIconContainer'>

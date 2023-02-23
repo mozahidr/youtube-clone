@@ -1,50 +1,329 @@
+import avatar from './images/avatar.png';
+import airpod from './images/airpod.jpeg';
+
 export const userData = [
-    {
-      name: 'January',
-      'Active User': 3000,
-    },
-    {
-      name: 'February',
-      'Active User': 4000,
-    },
-    {
-      name: 'March',
-      'Active User': 7000,
-    },
-    {
-      name: 'April',
-      'Active User': 2000,
-    },
-    {
-      name: 'May',
-      'Active User': 9000,
-    },
-    {
-      name: 'June',
-      'Active User': 3000,
-    },
-    {
-      name: 'July',
-      'Active User': 5000,
-    },
-    {
-      name: 'August',
-      'Active User': 6000,
-    },
-    {
-      name: 'September',
-      'Active User': 4500,
-    },
-    {
-      name: 'October',
-      'Active User': 3000,
-    },
-    {
-      name: 'November',
-      'Active User': 8800,
-    },
-    {
-      name: 'December',
-      'Active User': 15000,
-    },
-  ];
+  {
+    name: 'January',
+    'Active User': 3000,
+  },
+  {
+    name: 'February',
+    'Active User': 4000,
+  },
+  {
+    name: 'March',
+    'Active User': 7000,
+  },
+  {
+    name: 'April',
+    'Active User': 2000,
+  },
+  {
+    name: 'May',
+    'Active User': 9000,
+  },
+  {
+    name: 'June',
+    'Active User': 3000,
+  },
+  {
+    name: 'July',
+    'Active User': 5000,
+  },
+  {
+    name: 'August',
+    'Active User': 6000,
+  },
+  {
+    name: 'September',
+    'Active User': 4500,
+  },
+  {
+    name: 'October',
+    'Active User': 3000,
+  },
+  {
+    name: 'November',
+    'Active User': 8800,
+  },
+  {
+    name: 'December',
+    'Active User': 15000,
+  },
+];
+
+export const productData = [
+  {
+    name: 'January',
+    Sales: 7500,
+  },
+  {
+    name: 'February',
+    "Sales": 4500,
+  },
+  {
+    name: 'March',
+    "Sales": 9500,
+  }
+];
+
+export const UserRows = [
+  {
+    id: 1,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 2,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 3,
+    username: 'Jhon',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 4,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 5,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 6,
+    username: 'Mozahid',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 7,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 8,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 9,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 10,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 11,
+    username: 'Rana',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 12,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 13,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 14,
+    username: 'Martin',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 15,
+    username: 'Snow',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+  {
+    id: 11,
+    username: 'Rasel',
+    avatar: avatar,
+    email: 'snow@gmail.com',
+    status: 'active',
+    transaction: '$150.22',
+  },
+];
+export const ProductRows = [
+  {
+    id: 1,
+    name: 'Apple Airpod',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 2,
+    name: 'Apple Airpod',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 3,
+    name: 'Apple Airpod',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 4,
+    name: 'Apple Airpod',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 5,
+    name: 'Apple Watch',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 6,
+    name: 'Apple Watch',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 7,
+    name: 'Apple Watch',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 8,
+    name: 'Apple Watch',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 9,
+    name: 'Apple Watch',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 10,
+    name: 'Wireless Charger',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 11,
+    name: 'Wireless Charger',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 12,
+    name: 'Wireless Charger',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 13,
+    name: 'Wireless Charger',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 14,
+    name: 'Bose Bluetooth Speaker',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 15,
+    name: 'Bose Bluetooth Speaker',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+  {
+    id: 11,
+    name: 'Bose Bluetooth Speaker',
+    img: airpod,
+    stock: 56,
+    status: 'active',
+    price: '$150.22',
+  },
+];

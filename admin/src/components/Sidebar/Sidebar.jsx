@@ -14,6 +14,7 @@ import {
   ManageAccounts,
   Report
 } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
   return (
@@ -24,7 +25,7 @@ export const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
-              Home
+              <Link to='/' className='link'>Home</Link>
             </li>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
@@ -41,11 +42,11 @@ export const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <PermIdentity className="sidebarIcon" />
-              Users
+              <Link to='/users' className='link'>Users</Link>
             </li>
             <li className="sidebarListItem">
               <Storefront className="sidebarIcon" />
-              Products
+              <Link to='/products' className='link'>Products</Link>
             </li>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
