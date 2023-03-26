@@ -5,14 +5,15 @@ import {
   TrendingUp,
   Timeline,
   PermIdentity,
-  Storefront,
   AttachMoney,
   BarChart,
   MailOutline,
   ChatBubbleOutline,
   Message,
   ManageAccounts,
-  Report
+  Report,
+  PlayCircleOutline,
+  List,
 } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +26,9 @@ export const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
-              <Link to='/' className='link'>Home</Link>
+              <Link to="/" className="link">
+                Home
+              </Link>
             </li>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
@@ -40,14 +43,36 @@ export const Sidebar = () => {
         <div className="sidebarMenu">
           <h3 className="sidebartitle">Quick Menu</h3>
           <ul className="sidebarList">
+            <Link to="/users" className="link">
+              <li className="sidebarListItem">
+                <PermIdentity className="sidebarIcon" />
+                Users
+              </li>
+            </Link>
+            <Link to="/movies" className="link">
+              <li className="sidebarListItem">
+                <PlayCircleOutline className="sidebarIcon" />
+                Movies
+              </li>
+            </Link>
+            <Link to="/newMovie" className="link">
+              <li className="sidebarListItem">
+                <PlayCircleOutline className="sidebarIcon" />
+                Create Movie
+              </li>
+            </Link>
+            <Link to="/lists" className="link">
             <li className="sidebarListItem">
-              <PermIdentity className="sidebarIcon" />
-              <Link to='/users' className='link'>Users</Link>
+              <List className="sidebarIcon" />
+                List
             </li>
+            </Link>
+            <Link to="/newList" className="link">
             <li className="sidebarListItem">
-              <Storefront className="sidebarIcon" />
-              <Link to='/products' className='link'>Products</Link>
+              <List className="sidebarIcon" />
+                Create List
             </li>
+            </Link>
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transaction
@@ -66,7 +91,7 @@ export const Sidebar = () => {
               Mail
             </li>
             <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon"/>
+              <ChatBubbleOutline className="sidebarIcon" />
               Feedback
             </li>
             <li className="sidebarListItem">

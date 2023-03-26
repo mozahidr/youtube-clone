@@ -3,7 +3,7 @@ import CryptoJS from 'crypto-js';
 
 // UPDATE
 export const updateUser = async (req, res) => {
-  if (req.user.id === req.params.id || req.user.isAdmin) {
+  if (req.body.userId === req.params.id || req.user.isAdmin) {
     if (req.body.password) {
       req.body.password = CryptoJS.AES.encrypt(
         req.body.password,
@@ -55,10 +55,10 @@ export const getByID = async (req, res) => {
 // GET ALL USERS
 export const getAllUsers = async (req, res) => {
   const query = req.query.new;
-  if (req.user.isAdmin) {
+  if (req.user?.isAdmin) {
     try {
       const users = query
-        ? await User.find().sort({ _id: -1 }).limit(5)
+        ? await User.find().sort({ _id: -1 }).limit(8)
         : await User.find();
       res.status(200).json(users);
     } catch (err) {
@@ -73,21 +73,6 @@ export const getAllUsers = async (req, res) => {
 export const getUserStats = async (req, res) => {
   const today = new Date();
   const lastYear = today.setFullYear(today.setFullYear() - 1);
-
-  const monthaArray = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
 
   try {
     const data = await User.aggregate([

@@ -2,7 +2,7 @@ import Movie from '../models/Movie.js';
 
 // CREATE MOVIE
 export const createMovie = async (req, res) => {
-  if (req.user.isAdmin) {
+  if (req.user?.isAdmin) {
     const existingMovieName = await Movie.findOne({ title: req.body.title });
     if (existingMovieName) {
       res
@@ -25,7 +25,7 @@ export const createMovie = async (req, res) => {
 // UPDATE MOVIE
 
 export const updateMovie = async (req, res) => {
-  if (req.user.isAdmin) {
+  if (req.user?.isAdmin) {
     try {
       const existingMovieName = await Movie.findOne({ title: req.body.title });
       if (existingMovieName) {
@@ -54,7 +54,7 @@ export const updateMovie = async (req, res) => {
 
 // DELETE MOVIE
 export const deleteMovie = async (req, res) => {
-    if (req.user.isAdmin) {
+    if (req.user?.isAdmin) {
         try {
             await Movie.findByIdAndDelete(req.params.id);
             res.status(200).json("The movie has been deleted");
@@ -100,7 +100,7 @@ export const getRandomMovies = async (req, res) => {
 
 // GET ALL MOVIES
 export const getAllMovies = async (req, res) => {
-  if (req.user.isAdmin) {
+  if (req.user?.isAdmin) {
     try {
       const movies = await Movie.find();
       res.status(200).json(movies.reverse());

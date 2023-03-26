@@ -4,6 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { DeleteOutline } from '@mui/icons-material';
 import { UserRows } from '../../dummyData';
 import { Link } from 'react-router-dom';
+import { Navbar, Sidebar } from '../index';
 
 export const UserList = () => {
   const [data, setData] = useState(UserRows);
@@ -21,12 +22,16 @@ export const UserList = () => {
       editable: true,
       renderCell: (params) => {
         return (
-          <div className='userListUser'>
-            <img src={params.row.avatar} alt="profile" className='userListImg' />
+          <div className="userListUser">
+            <img
+              src={params.row.avatar}
+              alt="profile"
+              className="userListImg"
+            />
             {params.row.username}
           </div>
-        )
-      }
+        );
+      },
     },
     {
       field: 'email',
@@ -54,25 +59,35 @@ export const UserList = () => {
       renderCell: (params) => {
         return (
           <>
-          <Link to={'/user/' + params.row.id}><button className='userListEdit'>Edit</button></Link>
-          <DeleteOutline className='userListDelete' onClick={() => handleDelete(params.row.id)} />
+            <Link to={'/user/' + params.row.id}>
+              <button className="userListEdit">Edit</button>
+            </Link>
+            <DeleteOutline
+              className="userListDelete"
+              onClick={() => handleDelete(params.row.id)}
+            />
           </>
-        )
-      }
+        );
+      },
     },
   ];
 
-  
   return (
-    <div className="userList">
-      <DataGrid
-        rows={data}
-        columns={columns}
-        checkboxSelection
-        disableSelectionOnClick
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-      />
-    </div>
+    <>
+    <Navbar />
+      <div className="container">
+        <Sidebar />
+        <div className="userList">
+          <DataGrid
+            rows={data}
+            columns={columns}
+            checkboxSelection
+            disableSelectionOnClick
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+          />
+        </div>
+      </div>
+    </>
   );
 };

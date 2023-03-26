@@ -22,6 +22,16 @@ export const createList = async (req, res) => {
   }
 };
 
+// GET LIST BY ID
+export const getListById = async (req, res) => {
+    try {
+        const list = await List.findById(req.params.id);
+        res.status(200).json(list);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
+
 // DELETE LIST
 export const deleteList = async (req, res) => {
     if (req.user.isAdmin) {

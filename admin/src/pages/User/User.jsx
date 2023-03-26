@@ -10,9 +10,14 @@ import {
   LocationSearching,
   Publish,
 } from '@mui/icons-material';
+import { Navbar, Sidebar } from '../index';
 
 export const User = () => {
   return (
+    <>
+    <Navbar />
+    <div className='container'>
+      <Sidebar />
     <div className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
@@ -113,5 +118,7 @@ export const User = () => {
         </div>
       </div>
     </div>
+    </div>
+    </>
   );
 };

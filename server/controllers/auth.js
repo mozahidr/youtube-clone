@@ -9,8 +9,8 @@ export const register = async (req, res) => {
       res.status(422).json({ message: 'User already exists' });
       return;
     }
-    if(req.body.password.trim().length < 6) {
-      res.status(422).json({ message: 'Password must be at least 6 characters' });
+    if(req.body.password.trim().length < 5) {
+      res.status(422).json({ message: 'Password must be at least 5 characters' });
       return;
     }
     const newUser = new User({

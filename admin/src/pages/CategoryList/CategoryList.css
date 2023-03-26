@@ -19,6 +19,7 @@
     color: white;
     cursor: pointer;
     margin-right: 5px;
+    text-align: center;
 }
 .productListDelete {
     cursor: pointer;
